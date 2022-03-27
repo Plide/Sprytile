@@ -1358,8 +1358,6 @@ class UTIL_OP_SprytileSetupGrid(bpy.types.Operator):
                 if (area.type == 'VIEW_3D'):
                     for space in area.spaces:
                         if (space.type == 'VIEW_3D'):
-                            # space.overlay.grid_scale = pixel_unit
-                            # space.overlay.grid_subdivisions = 1
                             pass
         context.scene.tool_settings.use_snap = True
         context.scene.tool_settings.snap_elements = {'INCREMENT'}
