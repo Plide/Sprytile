@@ -1019,9 +1019,9 @@ class UTIL_OP_SprytileSetupTexture(bpy.types.Operator):
             return
         material = obj.material_slots[obj.active_material_index].material
 
-        #target_texture = None
-        #target_img = None
-        #target_slot = None
+        # target_texture = None
+        # target_img = None
+        # target_slot = None
         # for texture_slot in material.texture_slots:
         #     if texture_slot is None:
         #         continue
@@ -1335,7 +1335,7 @@ class UTIL_OP_SprytileMakeDoubleSided(bpy.types.Operator):
 
         mesh.faces.index_update()
         mesh.faces.ensure_lookup_table()
-        bmesh.update_edit_mesh(context.object.data, True, True)
+        bmesh.update_edit_mesh(context.object.data)
         return {'FINISHED'}
 
 
@@ -1358,9 +1358,9 @@ class UTIL_OP_SprytileSetupGrid(bpy.types.Operator):
                 if (area.type == 'VIEW_3D'):
                     for space in area.spaces:
                         if (space.type == 'VIEW_3D'):
-                            space.overlay.grid_scale = pixel_unit
-                            space.overlay.grid_subdivisions = 1
-        
+                            # space.overlay.grid_scale = pixel_unit
+                            # space.overlay.grid_subdivisions = 1
+                            pass
         context.scene.tool_settings.use_snap = True
         context.scene.tool_settings.snap_elements = {'INCREMENT'}
         return {'FINISHED'}
